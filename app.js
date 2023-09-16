@@ -2,6 +2,8 @@ const express = require ('express');
 const app = express();
 const port = 3000;
 
+app.use(express.static("public"));
+
 // Routes for specific pages
 app.get("/", (req, res) => {
 	res.sendFile(__dirname + "/public/index.html");
