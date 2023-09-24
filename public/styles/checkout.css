@@ -17,6 +17,7 @@ html,body{
 header {
     padding: 1% 0% 1% 0%; /* Adjust padding as needed */
   background-color: rgb(245,245,245);
+  
   display:grid;
     grid-template-columns: repeat(4, 1fr);
   overflow-x: hidden;
@@ -85,6 +86,17 @@ header>h2{
    padding: 2% 0 2% 5%;
    
 }
+h5{
+    font-weight: lighter;
+    font-size: 0.9rem;
+}
+#acctnum{
+    font-weight: lighter;
+    margin-top: -0.8%;
+}
+#bnktr{
+    margin-top: 4%;
+}
 #bkicresize{
     max-width: 100%;
     box-sizing: border-box;
@@ -93,7 +105,7 @@ header>h2{
 .bkiconsresize{
     width: 5%;
     height: auto;
-    min-width: 30%;
+    min-width: 20%;
     display:flex;
     justify-content: center;
     align-items: center;

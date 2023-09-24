@@ -141,6 +141,7 @@ header>h2{
     background-color: #F3FE5C;
   }
   #hsbtn2{
+    width: 45%;
     grid-column: 2/3;
     margin-left: 20%;
     border-color: #9CE8F1;

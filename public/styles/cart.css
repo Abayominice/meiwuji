@@ -76,6 +76,7 @@ header>h2{
 }
 
 /*header section ends here*/
+
 /*btns section start*/
 .btnssect{
     display: grid;
@@ -83,21 +84,35 @@ header>h2{
     background-color: rgb(245,245,245);
     padding: 10px 180px;
 }
-#vboa{
+#vab{
     grid-column: 1/2;
-    border-color: rgb(245,245,245);
+    border-color:  rgb(245,245,245);
+}
+#vab>a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+  }
+#vboa{
+    grid-column: 2/3;
+    margin-left: 28px;
+    border-color:  rgb(245,245,245);
     background-color: none;
 }
 .btnn1{
     font-size: 0.7rem;
 }
 .midcol{
-    grid-column: 2/6;
+    grid-column: 3/6;
+    
 }
 #vica{
     grid-column: 6/7;
+    
     border-color: black;
-    background-color: none;
+    background-color: #F3FE5C;
     
 }
 
@@ -108,9 +123,12 @@ header>h2{
     
     align-items: center;
     justify-content: center;
-    margin-top: -3px;
+    margin-top: -2px;
   }
   .btnn2{
+    font-size: 0.9rem;
+  }
+  .btnn3{
     font-size: 0.7rem;
   }
 /*ends here*/
@@ -150,23 +168,58 @@ header>h2{
 #hscttxt{
     grid-column: 3/5;
     display: flex;
-    align-items: flex-start;
+   
     flex-direction: column;
     text-align: left;
     font-weight: lighter;
 }
-  
-  .herosection h2,
-  .herosection p {
-    margin: 0;
-    color: rgb(0, 0, 0);
-  }
-  .herosection h2{
-    font-size: 3rem;
-    font-weight: bolder;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: rgb(0, 0, 0);
-  }
+#hscttxt>.fsect{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.fsect>.frow{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+.fsect>.srow{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+.srow>.r2c2{
+    grid-row: 2/3;
+}
+
+.ssect{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 20px;
+}
+.ssect>.ftype{
+    grid-column: 1/4;
+}
+.ssect>.price{
+    grid-column: 4/7;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    
+    
+}
+
+.deliconsresize>.extra{
+    width: 50px; 
+    margin-right: 300px;
+}
+.price>.carticonsresize{
+    margin-right: -250px;
+}
   
   .hscta{
     width: 150px;
@@ -181,11 +234,7 @@ header>h2{
     
     
   }
-  .desc{
-    font-size: 15px;
-    font-weight: lighter;
-    padding-top: 2%;
-  }
+  
   #hscttxt>.ftext{
     padding-top: 8%;
     font-size: 20px;
@@ -210,8 +259,7 @@ header>h2{
     border-color: #9CE8F1;
     background-color: #9CE8F1;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
   }
   #hsbtn2>a{
     display: flex;
@@ -221,34 +269,104 @@ header>h2{
     justify-content: center;
     margin-top: -9px;
   }
-  
+  #carticresize{
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.carticonsresize{
+    width: 3%;
+    height: auto;
+    min-width: 4%;
+    margin-right: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 #covicresize{
     max-width: 100%;
     box-sizing: border-box;
 }
 
 .coviconsresize{
-    width: 80%;
+    grid-row: 1/2;
+    width: 60%;
     height: auto;
-    min-width: 40%;
+    min-width: 10%;
     display:flex;
     justify-content: center;
     align-items: center;
 }
-#carticresize{
+#delicresize{
     max-width: 100%;
     box-sizing: border-box;
 }
 
-.carticonsresize{
-    width: 15%;
+.deliconsresize{
+    grid-row: 1/2;
+    width: 7%;
     height: auto;
-    min-width: 10%;
-    margin-right: 5px;
+    min-width: 7%;
     display:flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+/*ends here*/
+/*final checkout btns section start*/
+.fbtnssect{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: rgb(245,245,245);
+    padding: 10px 180px;
+}
+#firvab{
+    grid-column: 1/2;
+    border-color:  rgb(245,245,245);
+}
+#firvab>a{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+  }
+#svboa{
+    grid-column: 2/5;
+    margin-left: 28px;
+    border-color:  rgb(245,245,245);
+    background-color: none;
+}
+
+.stdlcol{
+    grid-column: 5/6;
+    border-color: black;
+    width:100px;
+}
+#svica{
+    grid-column: 6/7;
+    width:100px;
+    border-color: black;
+    background-color: #F3FE5C;
+    
+}
+
+  
+  #svica>a{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: -2px;
+  }
+  .btnn2{
+    font-size: 0.9rem;
+  }
+  .btnnn2{
+    font-size: 0.7rem;
+  }
 /*ends here*/
 
 /*footer starts*/
@@ -285,7 +403,6 @@ footer{
     grid-row: 2/3;
     display:grid;
     grid-template-columns: repeat(5, 1fr);
-    margin-left: 10%;
 }
 
 .r7c4>.soicons{
@@ -388,22 +505,23 @@ header>h2{
     padding-left: 30px;
 }
 #vboa{
-    grid-column: 1/2;
+    grid-column: 2/3;
     border-color: rgb(245,245,245);
     background-color: none;
-    
+    width: 100px;
+    margin-left: 45px;
 }
 .btnn1{
     font-size: 0.4rem;
 }
 .midcol{
-    grid-column: 2/6;
+    grid-column: 3/6;
 }
 #vica{
     grid-column: 6/7;
     border-color: black;
     background-color: none;
-    
+    width: 75px;
 }
 #lsh3{
     font-size: 0.6rem;
@@ -420,17 +538,86 @@ header>h2{
   .btnn2{
     font-size: 0.4rem;
   }
+  #vab{
+    grid-column: 1/2;
+    width: 75px;
+}
+#vab>a{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+.btnn3{
+    font-size: 0.4rem;
+  }
 /*ends here*/
+/*final checkout btns section start*/
+.fbtnssect{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: rgb(245,245,245);
+    padding: 10px 180px;
+}
+#firvab{
+    grid-column: 1/2;
+    border-color:  rgb(245,245,245);
+}
+#firvab>a{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+  }
+#svboa{
+    grid-column: 2/5;
+    margin-left: 28px;
+    border-color:  rgb(245,245,245);
+    background-color: none;
+}
 
+.stdlcol{
+    grid-column: 5/6;
+    border-color: black;
+    
+    
+}
+#svica{
+    grid-column: 6/7;
+    width:60px;
+    height:13px;
+    border-color: black;
+    background-color: #F3FE5C;
+    margin-left: 38px;
+}
+
+  
+  #svica>a{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  
+  .btnnn2{
+    font-size: 0.4rem;
+  }
+/*ends here*/
 /*hero section starts here*/
 
 
   
 .hscta{
-    width: 100px;
-    height: 20px;
-    margin: 2% -25px 0 0;
-    padding: 10% 8% 0 8%;
+    width: 60px;
+    height: 13px;
+    margin: 0 -25px 0 -30px;
+    padding: 8px 8% 0 8%;
     border-style: solid;
     text-align: center;
     border-width: 1px;
@@ -439,15 +626,47 @@ header>h2{
     
     
   }
-  .desc{
-    font-size: 8px;
-    font-weight: lighter;
-    padding-top: 2%;
-  }
-  #hscttxt>.ftext{
-    padding-top: 8%;
-    font-size: 9px;
-  }
+  .deliconsresize>.extra{
+    width: 50px; 
+    margin-right: 80px;
+}
+.price>.carticonsresize{
+    margin-right: -40px;
+}
+.frow>.authname{
+    font-size: 0.25rem;
+}
+.deliconsresize{
+    grid-row: 1/2;
+    width: 7%;
+    height: auto;
+    min-width: 19%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.carticonsresize{
+    width: 3%;
+    height: auto;
+    min-width: 12%;
+    margin-right: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.frow>.ftext{
+    font-size: 0.6rem;
+}
+.ssect>.ftype{
+    font-size: 0.6rem;
+}
+h3{
+    font-size: 0.6rem;
+}
+.price .btnn{
+    font-size: 0.6rem;
+}
   .hscta a{
     color: #000;
     font-weight: lighter;
@@ -475,7 +694,7 @@ header>h2{
   }
 
 .coviconsresize{
-    width: 90%;
+    width: 70%;
     height: auto;
     min-width: 40%;
     display:flex;
@@ -604,7 +823,183 @@ footer{
 }
         
 
+.btnssect{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: rgb(245,245,245);
+    margin-left: 0;
+    padding-right: 70px;
+    padding-left: 40px;
+} 
+
+/*btns section start*/
+
+#vboa{
+    grid-column: 2/3;
+    border-color: rgb(245,245,245);
+    background-color: none;
+    width: 100px;
+    margin-left: 45px;
+}
+.btnn1{
+    font-size: 0.4rem;
+}
+.midcol{
+    grid-column: 3/6;
+}
+#vica{
+    grid-column: 6/7;
+    border-color: black;
+    background-color: none;
+    width: 75px;
+}
+#lsh3{
+    font-size: 0.6rem;
+}
+  
+  #vica>a{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .btnn2{
+    font-size: 0.5rem;
+  }
+  #vab{
+    grid-column: 1/2;
+    width: 75px;
+}
+#vab>a{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+.btnn3{
+    font-size: 0.5rem;
+  }
+/*ends here*/
+/*final checkout btns section start*/
+.fbtnssect{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: rgb(245,245,245);
+    padding: 10px 180px;
+}
+#firvab{
+    grid-column: 1/2;
+    border-color:  rgb(245,245,245);
+}
+#firvab>a{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+  }
+#svboa{
+    grid-column: 2/5;
+    margin-left: 28px;
+    border-color:  rgb(245,245,245);
+    background-color: none;
+}
+
+.stdlcol{
+    grid-column: 5/6;
+    border-color: black;
+    
+    
+}
+#svica{
+    grid-column: 6/7;
+    width:90px;
+    height:13px;
+    border-color: black;
+    background-color: #F3FE5C;
+    margin-left: 20px;
+}
+
+  
+  #svica>a{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  
+  .btnnn2{
+    font-size: 0.6rem;
+  }
+/*ends here*/
+/*hero section starts here*/
 
 
-
+  
+.hscta{
+    width: 90px;
+    height: 13px;
+    margin: 0 -25px 0 -30px;
+    padding: 8px 8% 0 8%;
+    border-style: solid;
+    text-align: center;
+    border-width: 1px;
+    
+    border-radius: 40px;
+    
+    
+  }
+  .deliconsresize>.extra{
+    width: 50px; 
+    margin-right: 190px;
+}
+.price>.carticonsresize{
+    margin-right: -100px;
+}
+.frow>.authname{
+    font-size: 0.5rem;
+}
+.deliconsresize{
+    grid-row: 1/2;
+    width: 7%;
+    height: auto;
+    min-width: 9%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.carticonsresize{
+    width: 2%;
+    height: auto;
+    min-width: 8%;
+    margin-right: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.frow>.ftext{
+    font-size: 0.8rem;
+}
+.ssect>.ftype{
+    font-size: 0.8rem;
+}
+h3{
+    font-size: 0.8rem;
+}
+.price .btnn{
+    font-size: 0.8rem;
+}
+/*footer*/
+.r7c1>h2{
+    grid-column: 1/3;
+    font-size: 0.7rem;
+}
 }

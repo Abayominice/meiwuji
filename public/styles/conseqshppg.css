@@ -98,8 +98,8 @@ header>h2{
 #vboa{
     grid-column: 2/3;
     margin-left: 28px;
-    border-color: #F3FE5C;
-    background-color: #F3FE5C;
+    border-color: rgb(245,245,245);
+    background-color: none;
 }
 .btnn1{
     font-size: 0.7rem;
@@ -111,7 +111,7 @@ header>h2{
 #vica{
     grid-column: 6/7;
     
-    border-color: rgb(245,245,245);
+    border-color: black;
     background-color: none;
     
 }
@@ -476,8 +476,8 @@ header>h2{
 }
 #vboa{
     grid-column: 2/3;
-    border-color: #F3FE5C;
-    background-color: #F3FE5C;
+    border-color: rgb(245,245,245);
+    background-color: none;
     width: 100px;
     margin-left: 45px;
 }

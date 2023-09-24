@@ -246,9 +246,9 @@ header>h2{
 }
 
 .carticonsresize{
-    width: 0;
+    width: 10%;
     height: auto;
-    min-width: 0;
+    min-width: 15%;
     margin-right: 5px;
     display:flex;
     justify-content: center;
