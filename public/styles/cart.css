@@ -133,7 +133,7 @@ header>h2{
   }
 /*ends here*/
 /*books options section starts*/
-.booklist {
+.cartlist {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -141,7 +141,7 @@ header>h2{
     background-color: rgb(245,245,245);
     padding-top: 5%;
 }
-.bookopts{
+.cartopts{
     
     padding-bottom: 10px;
     padding-top: 15px;
