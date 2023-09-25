@@ -21,7 +21,7 @@ const productsEl = document.querySelector(".booklist");
 
 
 // Fetch the products data from the JSON file
-fetch('path/to/products.json')
+fetch('./scripts/booklists.js')
   .then((response) => response.json())
   .then((data) => {
     // Now you can use the 'products' array from the data
