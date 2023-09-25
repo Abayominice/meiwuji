@@ -43,8 +43,7 @@ function renderSubtotal() {
     totalItems += item.numberOfUnits;
   });
 
-  subtotalEl.innerHTML = `Subtotal (${totalItems} items): $${totalPrice.toFixed(2)}`;
-  totalItemsInCartEl.innerHTML = totalItems;
+  subtotalEl.innerHTML = `Subtotal (${totalItems} items): NGN${totalPrice.toFixed(2)}`;
 }
 
 // render cart items

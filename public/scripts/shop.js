@@ -77,7 +77,8 @@ renderProdcuts();
       const item = products.find((product) => product.id === id);
   
       cart.push({
-        ...item
+        ...item,
+        numberOfUnits: 1,
       });
     }
   
