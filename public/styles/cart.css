@@ -110,9 +110,9 @@ header>h2{
 }
 #vica{
     grid-column: 6/7;
-    
+    width: 200px;
     border-color: black;
-    background-color: #F3FE5C;
+    background-color: none;
     
 }
 
@@ -521,7 +521,7 @@ header>h2{
     grid-column: 6/7;
     border-color: black;
     background-color: none;
-    width: 75px;
+    width: 100px;
 }
 #lsh3{
     font-size: 0.6rem;
