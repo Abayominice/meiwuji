@@ -60,7 +60,6 @@ function renderProdcuts() {
         </div>
       </div>
         `;
-        console.log("Hi");
   });
 }
 renderProdcuts();
