@@ -64,3 +64,28 @@ function renderProdcuts() {
 }
 renderProdcuts();
 
+  // cart array
+  let cart = JSON.parse(localStorage.getItem("CART")) || [];
+  updateCart();
+  
+  // ADD TO CART
+  function addToCart(id) {
+    // check if prodcut already exist in cart
+    if (cart.some((item) => item.id === id)) {
+      alert("Product already in cart!")
+    } else {
+      const item = products.find((product) => product.id === id);
+  
+      cart.push({
+        ...item
+      });
+    }
+  
+    updateCart();
+  }
+  
+  // update cart
+  function updateCart() {
+    // save cart to local storage
+    localStorage.setItem("CART", JSON.stringify(cart));
+  }

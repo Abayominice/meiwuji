@@ -23,22 +23,6 @@ function myFunction() {
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();
 
-// ADD TO CART
-function addToCart(id) {
-  // check if prodcut already exist in cart
-  if (cart.some((item) => item.id === id)) {
-    changeNumberOfUnits("plus", id);
-  } else {
-    const item = products.find((product) => product.id === id);
-
-    cart.push({
-      ...item,
-      numberOfUnits: 1,
-    });
-  }
-
-  updateCart();
-}
 
 // update cart
 function updateCart() {
@@ -68,20 +52,47 @@ function renderCartItems() {
   cartItemsEl.innerHTML = ""; // clear cart element
   cart.forEach((item) => {
     cartItemsEl.innerHTML += `
-        <div class="cart-item">
-            <div class="item-info" onclick="removeItemFromCart(${item.id})">
-                <img src="${item.imgSrc}" alt="${item.name}">
-                <h4>${item.name}</h4>
+        <div class="cartopts">
+        <div class= "covsect">
+            <div class="coviconsresize">
+                <img src="${item.imgSrc}" alt="${item.name}" id="covicresize">
             </div>
-            <div class="unit-price">
-                <small>$</small>${item.price}
+             
+        </div>
+        <div id="hscttxt" class="menul menu all">
+            <div class="fsect">
+                <div class="frow">
+                    <h2 class="ftext bktitle">${item.name}</h2>
+                    <h2 class="authname" style="font-weight: lighter;">M&nbsp;&nbsp; M&nbsp;&nbsp; E&nbsp;&nbsp; S&nbsp;&nbsp; O&nbsp;&nbsp; M&nbsp;&nbsp; A&nbsp;&nbsp; .&nbsp;&nbsp; E&nbsp;&nbsp; .&nbsp;&nbsp; I&nbsp;&nbsp; W&nbsp;&nbsp; U&nbsp;&nbsp; J&nbsp;&nbsp; I</h2>
+ 
+                </div>
+                <div class="srow">
+                    <div class="deliconsresize">
+                        <div class="extra"></div>
+                        <img src="Images/icons8-delete-1000.png" onclick="removeItemFromCart(${item.id})" alt="Blazonshots" id="delicresize">
+                    </div>
+                    <div class="r2c2"></div>
+                </div>
+                
             </div>
-            <div class="units">
-                <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
-                <div class="number">${item.numberOfUnits}</div>
-                <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>           
+            <div class="ssect">
+                <div class="ftype"><h3>FILE TYPE</h3></div>
+                <div class="price">
+                    <div class="btnn"><h3>PRICE</h3></div>
+                </div>
+            </div>
+            <div class="ssect">
+                <div class="ftype">PDF</div>
+                <div class="price">
+                    <div class="carticonsresize">
+                    <img src="Images/nigeria-naira-currency-symbol_32974.png" alt="Blazonshots" id="carticresize">
+                    </div>
+                    <div class="btn2">${item.price}</div>
+                </div>
             </div>
         </div>
+      </div>
+    </div>
       `;
   });
 }
@@ -93,24 +104,4 @@ function removeItemFromCart(id) {
   updateCart();
 }
 
-// change number of units for an item
-function changeNumberOfUnits(action, id) {
-  cart = cart.map((item) => {
-    let numberOfUnits = item.numberOfUnits;
 
-    if (item.id === id) {
-      if (action === "minus" && numberOfUnits > 1) {
-        numberOfUnits--;
-      } else if (action === "plus" && numberOfUnits < item.instock) {
-        numberOfUnits++;
-      }
-    }
-
-    return {
-      ...item,
-      numberOfUnits,
-    };
-  });
-
-  updateCart();
-}
