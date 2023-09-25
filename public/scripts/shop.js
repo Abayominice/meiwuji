@@ -20,23 +20,7 @@ function myFunction() {
 const productsEl = document.querySelector(".booklist");
 
 
-// Fetch the products data from the JSON file
-fetch('./scripts/booklists.js')
-  .then((response) => response.json())
-  .then((data) => {
-    // Now you can use the 'products' array from the data
-    const products = data;
-    renderProdcuts(); // Call your render function here
-  })
-  .catch((error) => {
-    console.error('Error fetching products:', error);
-  });
 
-// Define your renderProducts function
-function renderProducts(products) {
-  // Render the products as you did before
-  // ...
-}
 
 // RENDER PRODUCTS
 function renderProdcuts() {
@@ -79,5 +63,5 @@ function renderProdcuts() {
         console.log("Hi");
   });
 }
-
+renderProdcuts();
 
