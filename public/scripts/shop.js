@@ -43,7 +43,7 @@ function renderProdcuts() {
                 This three-books-in-one teaches morals in an entertaining way and it's plots </br>
                 and scenes are carefully crafted to catch and sustain the interest of today's youths, </br>
                 even those suffering from short attention span.</br></br> 
-                <b>Price: NGN</b></h3>
+                <b>Price: NGN${product.price}</b></h3>
             <div id="hscbtns">
               <div id="hsbtn1" class="hscta">
                 <a><div class="btn1">PDF</div></a>
