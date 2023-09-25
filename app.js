@@ -27,5 +27,8 @@ app.get("/", (req, res) => {
   app.get("/shop", (req, res) => {
 	res.sendFile(__dirname + "/public/shop.html");
   });
+  app.get("/cart", (req, res) => {
+    res.sendFile(__dirname + "/public/cart.html");
+    });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
