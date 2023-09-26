@@ -43,6 +43,7 @@ async function payNow() {
         },
         body: JSON.stringify({
           amount: totallPrice, // Replace with the actual payment amount
+          public_key: "FLWPUBK_TEST-939acb7e72fe1cc610ea491135e2e4b1-X",
           tx_ref: uniqueString,
           currency: 'NGN', // Replace with the desired currency
           email: email,
