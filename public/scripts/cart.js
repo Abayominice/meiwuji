@@ -1,4 +1,4 @@
-
+let totallPrice = 0; // Initialize totallPrice with a default value of 0
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 
@@ -34,7 +34,7 @@ function updateCart() {
   localStorage.setItem("CART", JSON.stringify(cart));
 }
 
-export let totallPrice = 0; // Initialize totallPrice with a default value of 0
+
 
 // calculate and render subtotal
 function renderSubtotal() {
@@ -50,7 +50,7 @@ function renderSubtotal() {
   totallPrice = totalPrice.toFixed(2); // Assign the calculated value to totallPrice
 }
 
-
+export { totallPrice }; // Export totallPrice after it has been assigned a value
 
 
 // render cart items
