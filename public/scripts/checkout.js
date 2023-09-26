@@ -25,52 +25,31 @@ function generateUniqueString(prefix = '', length = 10) {
     return `${prefix}-${timestamp}-${randomString}`;
   }
 
-// Define the payNow function
-async function payNow() {
 
+
+  function makePayment() {
     const name = document.getElementById('flname').value;
   const email = document.getElementById('email').value;
   const phoneNumber = document.getElementById('phone').value;
 
-    // Call the generateUniqueString function to get a unique string
-    const uniqueString = generateUniqueString('meiwuji', 10);
-  
-    try {
-      const response = await fetch('/processPayment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          amount: totallPrice, // Replace with the actual payment amount
-          public_key: "FLWPUBK_TEST-939acb7e72fe1cc610ea491135e2e4b1-X",
-          tx_ref: uniqueString,
-          currency: 'NGN', // Replace with the desired currency
-          email: email,
-          phonenumber: phoneNumber,
-          name: name, // Replace with the customer's name
-          // Add other payment data as needed
-        }),
-      });
-  
-      const result = await response.json();
-  
-      // Handle the response here
-      console.log(result);
-  
-      
-    } catch (error) {
-      console.error(error);
-      // Handle network or other errors
-    }
+  // Call the generateUniqueString function to get a unique string
+  const uniqueString = generateUniqueString('meiwuji', 10);
+
+    FlutterwaveCheckout({
+      public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
+      tx_ref: uniqueString,
+      amount: totallPrice,
+      currency: "NGN",
+      payment_options: "card, banktransfer, ussd",
+      redirect_url: "https://www.meiwuji.store/download",
+      customer: {
+        email: email,
+        phone_number: phoneNumber,
+        name: name,
+      },
+      customizations: {
+        title: "CONSEQUENCES",
+        logo: "https://drive.google.com/file/d/1824LP_tZrHTjMmcINYJ9gB-F4YAhcTxQ/view?usp=sharing",
+      },
+    });
   }
-  
-  // Get a reference to the pay button by its ID (assuming the button has an ID of "payButton")
-  const payButton = document.getElementById('payButton');
-  
-  // Add a click event listener to the pay button
-  payButton.addEventListener('click', async () => {
-    // Call the payNow function when the button is clicked
-    await payNow();
-  });
-  
