@@ -1,4 +1,4 @@
-import { totalPrice } from 'scripts/cart.js';
+import { totallPrice } from 'scripts/cart.js';
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 
@@ -42,7 +42,7 @@ async function payNow() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          amount: totalPrice, // Replace with the actual payment amount
+          amount: totallPrice, // Replace with the actual payment amount
           tx_ref: uniqueString,
           currency: 'NGN', // Replace with the desired currency
           email: email,
