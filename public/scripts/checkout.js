@@ -36,7 +36,7 @@ function generateUniqueString(prefix = '', length = 10) {
   const uniqueString = generateUniqueString('meiwuji', 10);
 
     FlutterwaveCheckout({
-      public_key: "FLWPUBK_TEST-SANDBOXDEMOKEY-X",
+      public_key: "FLWPUBK_TEST-939acb7e72fe1cc610ea491135e2e4b1-X",
       tx_ref: uniqueString,
       amount: totallPrice,
       currency: "NGN",
