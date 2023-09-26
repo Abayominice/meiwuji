@@ -34,11 +34,12 @@ function updateCart() {
   localStorage.setItem("CART", JSON.stringify(cart));
 }
 
-let totallPrice = 0
+let totallPrice = 0; // Initialize totallPrice with a default value of 0
+
 // calculate and render subtotal
 function renderSubtotal() {
-  
-  let totalPrice = 0, totalItems = 0;
+  let totalPrice = 0;
+  let totalItems = 0;
 
   cart.forEach((item) => {
     totalPrice += item.price * item.numberOfUnits;
@@ -46,10 +47,11 @@ function renderSubtotal() {
   });
 
   subtotalEl.innerHTML = `Subtotal (${totalItems} items): NGN${totalPrice.toFixed(2)}`;
-  totallPrice = totalPrice.toFixed(2);
+  totallPrice = totalPrice.toFixed(2); // Assign the calculated value to totallPrice
 }
 
- export {totallPrice};
+export { totallPrice }; // Export totallPrice after it has been assigned a value
+
 
 // render cart items
 function renderCartItems() {
