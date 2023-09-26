@@ -1,6 +1,12 @@
 
 const path = require('path');
+console.log("Before dotenv.config()");
 require("dotenv").config({ path: path.resolve(__dirname, '/.env') });
+
+
+console.log("After dotenv.config()");
+console.log("Loaded Environment Variables:", process.env);
+console.log("PUBLIC_KEY:", process.env.PUBLIC_KEY);
 const express = require('express');
 
 const app = express();
