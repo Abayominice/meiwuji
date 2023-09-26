@@ -32,6 +32,7 @@ function generateUniqueString(prefix = '', length = 10) {
     const name = document.getElementById('flname').value;
   const email = document.getElementById('email').value;
   const phoneNumber = document.getElementById('phone').value;
+  console.log('hi');
 
   // Call the generateUniqueString function to get a unique string
   const uniqueString = generateUniqueString('meiwuji', 10);
