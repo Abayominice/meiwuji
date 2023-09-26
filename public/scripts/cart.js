@@ -34,9 +34,10 @@ function updateCart() {
   localStorage.setItem("CART", JSON.stringify(cart));
 }
 
+let totalPrice = 0
 // calculate and render subtotal
 function renderSubtotal() {
-  let totalPrice = 0,
+  
     totalItems = 0;
 
   cart.forEach((item) => {
@@ -47,6 +48,8 @@ function renderSubtotal() {
   subtotalEl.innerHTML = `Subtotal (${totalItems} items): NGN${totalPrice.toFixed(2)}`;
   
 }
+
+export const totallPrice = totalPrice.toFixed(2);
 
 // render cart items
 function renderCartItems() {
@@ -104,5 +107,5 @@ function removeItemFromCart(id) {
 
   updateCart();
 }
-export const totallPrice = totalPrice.toFixed(2);
+
 
