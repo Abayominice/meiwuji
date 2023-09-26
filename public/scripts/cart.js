@@ -1,4 +1,4 @@
-export const totallPrice = totalPrice.toFixed(2);
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 
@@ -45,6 +45,7 @@ function renderSubtotal() {
   });
 
   subtotalEl.innerHTML = `Subtotal (${totalItems} items): NGN${totalPrice.toFixed(2)}`;
+  
 }
 
 // render cart items
@@ -103,5 +104,5 @@ function removeItemFromCart(id) {
 
   updateCart();
 }
-
+export const totallPrice = totalPrice.toFixed(2);
 
