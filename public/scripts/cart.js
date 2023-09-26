@@ -34,7 +34,7 @@ function updateCart() {
   localStorage.setItem("CART", JSON.stringify(cart));
 }
 
-const totallPrice = 0
+let totallPrice = 0
 // calculate and render subtotal
 function renderSubtotal() {
   
