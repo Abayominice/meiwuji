@@ -53,3 +53,11 @@ function generateUniqueString(prefix = '', length = 10) {
       },
     });
   }
+  // Get a reference to the pay button by its ID (assuming the button has an ID of "payButton")
+  const payButton = document.getElementById('payButton');
+  
+  // Add a click event listener to the pay button
+  payButton.addEventListener('click', async () => {
+    // Call the payNow function when the button is clicked
+    await makePayment();
+  });
