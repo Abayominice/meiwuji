@@ -1,7 +1,7 @@
 require("dotenv").config({});
 const express = require ('express');
 
-const fetch = require('node-fetch');
+
 const app = express();
 const port = 3000;
 
@@ -50,9 +50,11 @@ app.post('/processPayment', async (req, res) => {
   // Retrieve payment data from the request body
   const paymentData = req.body;
 
+  const fetch = await import('node-fetch');
+
   // Handle payment processing using got or any other library you prefer
   try {
-    const response = await fetch('https://api.flutterwave.com/v3/payments', {
+    const response = await fetch.default('https://api.flutterwave.com/v3/payments', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${process.env.SECRET_KEY}`,
