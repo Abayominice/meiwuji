@@ -11,7 +11,7 @@ const Flutterwave = require('flutterwave-node-v3');
 
 const flw = new Flutterwave(process.env.PUBLIC_KEY, process.env.SECRET_KEY);
 console.log("PUBLIC_KEY:", process.env.PUBLIC_KEY);
-console.log("Env File Path:", path.resolve(__dirname, '.env'));
+console.log("Env File Path:", path.resolve(__dirname, '/.env'));
 
 app.use(express.urlencoded({extended: true}));
 
