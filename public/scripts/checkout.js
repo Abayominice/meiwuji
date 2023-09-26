@@ -1,4 +1,5 @@
 import { totallPrice } from '/scripts/cart.js'; 
+console.log(totallPrice);
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 
