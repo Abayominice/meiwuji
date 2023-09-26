@@ -34,11 +34,11 @@ function updateCart() {
   localStorage.setItem("CART", JSON.stringify(cart));
 }
 
-let totalPrice = 0
+let totalPrice = 0, totalItems = 0;
 // calculate and render subtotal
 function renderSubtotal() {
   
-    totalItems = 0;
+    
 
   cart.forEach((item) => {
     totalPrice += item.price * item.numberOfUnits;
