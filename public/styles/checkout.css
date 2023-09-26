@@ -77,39 +77,67 @@ header>h2{
 }
 
 /*header section ends here*/
-.pay{
-    display: flex;
-    flex-direction:column;
-    background-color: rgb(245,245,245);
-   align-items: flex-start;
-   justify-content: space-between;
-   padding: 2% 0 2% 5%;
-   
-}
-h5{
-    font-weight: lighter;
-    font-size: 0.9rem;
-}
-#acctnum{
-    font-weight: lighter;
-    margin-top: -0.8%;
-}
-#bnktr{
-    margin-top: 4%;
-}
-#bkicresize{
-    max-width: 100%;
-    box-sizing: border-box;
-}
 
-.bkiconsresize{
-    width: 5%;
-    height: auto;
-    min-width: 20%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+/*Signup starts*/
+.susect{
+    background-color:rgb(245,245,245);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2.9% 0 2.9% 0;
 }
+.r6c1{
+    grid-column: 1/2;
+}
+.msub{
+    grid-column: 2/4;
+}
+.r6c4{
+    grid-column: 4/5;
+}
+.susect .canacc{
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+#subform .ol{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 2.4%;
+}
+.ssd{
+    margin-bottom: 2.4%;
+}
+#email{
+    width: 100%;
+    padding: 2% 0 2% 0;
+}
+.email{
+    font-size:  1.4rem;
+    color: rgb(0, 0, 0);
+}
+#rsik{
+    color: #F3FE5C;
+}
+.fisignup{
+    width: 120px;
+    height: 50px;
+    margin: 2% 0 25% 0;
+    padding: 0 0 0 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #F3FE5C;
+    border-radius: 40px;
+    border-top: hidden;
+    border-bottom: hidden;
+    background-color: #F3FE5C;
+}
+.fisignup h3>a{
+    color: black;
+    text-decoration: none;
+}
+/*Ends*/
+
+
 /*footer starts*/
 footer{
     margin:0;
@@ -235,14 +263,16 @@ header>h2{
 }
 
 /*header section ends here*/
-.bkiconsresize{
-    width: 2%;
-    height: auto;
-    min-width: 40%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+
+.susect .canacc{
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0);
 }
+.email{
+    font-size:  0.8rem;
+    color: rgb(0, 0, 0);
+}
+/*sub section end*/
 
 /*footer starts*/
 footer{
@@ -362,7 +392,16 @@ footer{
     display: none;
 }
     
-
+/*sub section start*/
+.susect .canacc{
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+}
+.email{
+    font-size:  1.2rem;
+    color: rgb(0, 0, 0);
+}
+/*sub section end*/
 
 
 

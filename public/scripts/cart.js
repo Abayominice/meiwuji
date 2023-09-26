@@ -1,3 +1,4 @@
+export const totallPrice = totalPrice.toFixed(2);
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 
@@ -68,7 +69,7 @@ function renderCartItems() {
                 <div class="srow">
                     <div class="deliconsresize">
                         <div class="extra"></div>
-                        <img src="Images/icons8-delete-1000.png" onclick="removeItemFromCart(${item.id})" alt="Blazonshots" id="delicresize">
+                        <img src="Images/icons8-delete-1000.png" style="cursor: pointer;" onclick="removeItemFromCart(${item.id})" alt="Blazonshots" id="delicresize">
                     </div>
                     <div class="r2c2"></div>
                 </div>
