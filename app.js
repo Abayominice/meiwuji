@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 const Flutterwave = require('flutterwave-node-v3');
-const open = require("open")
+
 
 
 const flw = new Flutterwave(process.env.PUBLIC_KEY, process.env.SECRET_KEY);
