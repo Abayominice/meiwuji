@@ -1,16 +1,10 @@
 require("dotenv").config();
 const express = require ('express');
 
-const path = require('path');
+process.env.PUBLIC_KEY = 'FLWPUBK_TEST-939acb7e72fe1cc610ea491135e2e4b1-X';
+process.env.SECRET_KEY = 'FLWSECK_TEST-c5d6862c3d99722f93fba9acee6371e1-X';
+process.env.ENCRYPTION_KEY = 'FLWSECK_TESTdae0705e3852';
 
-const result = require('dotenv').config({ path: path.resolve(__dirname, '.env') });
-
-if (result.error) {
-  console.error(result.error);
-} else {
-  console.log("dotenv loaded successfully");
-  console.log("PUBLIC_KEY:", process.env.PUBLIC_KEY);
-}
 const app = express();
 const port = 3000;
 
@@ -18,7 +12,7 @@ const port = 3000;
 
 //const flw = new Flutterwave(process.env.PUBLIC_KEY, process.env.SECRET_KEY);
 console.log("PUBLIC_KEY:", process.env.PUBLIC_KEY);
-console.log("Env File Path:", path.resolve(__dirname, '.env'));
+
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
