@@ -13,7 +13,7 @@ process.env.SECRET_KEY = 'FLWSECK_TEST-c5d6862c3d99722f93fba9acee6371e1-X';
 process.env.ENCRYPTION_KEY = 'FLWSECK_TESTdae0705e3852';
 
 const app = express();
-const { initializePayment } = require('/scripts/cart.js');
+const { initializePayment } = require('./public/scripts/cart');
 const port = 3000;
 
 const Flutterwave = require('flutterwave-node-v3');
