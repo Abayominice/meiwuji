@@ -1,6 +1,13 @@
+// Use the esm module to enable import syntax in CommonJS
+require = require("esm")(module);
+
+// Now you can use import syntax in your CommonJS file
+
+
+
 require("dotenv").config();
 const express = require ('express');
-const got = require('got');
+const { default: got } = await import('got');
 process.env.PUBLIC_KEY = 'FLWPUBK_TEST-939acb7e72fe1cc610ea491135e2e4b1-X';
 process.env.SECRET_KEY = 'FLWSECK_TEST-c5d6862c3d99722f93fba9acee6371e1-X';
 process.env.ENCRYPTION_KEY = 'FLWSECK_TESTdae0705e3852';

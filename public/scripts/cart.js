@@ -71,7 +71,7 @@ async function initializePayment() {
   const uniqueString = generateUniqueString('meiwuji', 10);
 
   try {
-    const got = require('got');
+    const got = (await import('got')).default;
     const response = await got.post('/processPayment', {
       headers: {
         'Content-Type': 'application/json',
@@ -180,4 +180,3 @@ window.removeItemFromCart = function (id) {
   cart = cart.filter((item) => item.id !== id);
   updateCart();
 };
-
