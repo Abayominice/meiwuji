@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/cart.html");
     });
 
-
+console.log('hi');
 
   
 // Define a route for processing payments
