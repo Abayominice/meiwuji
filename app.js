@@ -7,9 +7,9 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 const app = express();
 const port = 3000;
 
-const Flutterwave = require('flutterwave-node-v3');
+//const Flutterwave = require('flutterwave-node-v3');
 
-const flw = new Flutterwave(process.env.PUBLIC_KEY, process.env.SECRET_KEY);
+//const flw = new Flutterwave(process.env.PUBLIC_KEY, process.env.SECRET_KEY);
 console.log("PUBLIC_KEY:", process.env.PUBLIC_KEY);
 console.log("Env File Path:", path.resolve(__dirname, '.env'));
 app.use(express.urlencoded({extended: true}));
@@ -46,7 +46,7 @@ app.get("/", (req, res) => {
 console.log('hi');
 
   
-// Define a route for processing payments
+/*// Define a route for processing payments
 app.post('/processPayment', async (req, res) => {
   // Retrieve payment data from the request body
   const paymentData = req.body;
@@ -80,7 +80,7 @@ app.post('/processPayment', async (req, res) => {
     // Handle errors as needed and send an appropriate response
     res.status(500).json({ success: false, message: 'Payment processing error' });
   }
-});
+});*/
 
 
 

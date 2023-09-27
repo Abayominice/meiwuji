@@ -70,7 +70,7 @@ async function initializePayment() {
 
   const uniqueString = generateUniqueString('meiwuji', 10);
 
-  try {
+  /*try {
     const response = await fetch('/processPayment', {
       method: 'POST',
       headers: {
@@ -96,9 +96,9 @@ async function initializePayment() {
   } catch (error) {
     console.error(error);
     // Handle network or other errors
-  }
+  }*/
 
-  /*FlutterwaveCheckout({
+  FlutterwaveCheckout({
     public_key: "FLWPUBK_TEST-939acb7e72fe1cc610ea491135e2e4b1-X",
     tx_ref: uniqueString,
     amount: totallPrice,
@@ -114,7 +114,7 @@ async function initializePayment() {
       title: "CONSEQUENCES",
       logo: "https://drive.google.com/file/d/1824LP_tZrHTjMmcINYJ9gB-F4YAhcTxQ/view?usp=sharing",
     },
-  });*/
+  });
 }
 
 export { initializePayment }; // Export the function
