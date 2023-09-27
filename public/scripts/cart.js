@@ -71,8 +71,7 @@ async function initializePayment() {
   const uniqueString = generateUniqueString('meiwuji', 10);
 
   try {
-    const response = await fetch('/processPayment', {
-      method: 'POST',
+    const response = await got.post('/processPayment', {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -97,7 +96,7 @@ async function initializePayment() {
     console.error(error);
     // Handle network or other errors
   }
-
+}
   /*FlutterwaveCheckout({
     public_key: "FLWPUBK_TEST-939acb7e72fe1cc610ea491135e2e4b1-X",
     tx_ref: uniqueString,
@@ -115,7 +114,7 @@ async function initializePayment() {
       logo: "https://drive.google.com/file/d/1824LP_tZrHTjMmcINYJ9gB-F4YAhcTxQ/view?usp=sharing",
     },
   });*/
-}
+
 
 export { initializePayment }; // Export the function
 
