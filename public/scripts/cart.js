@@ -117,7 +117,7 @@ async function initializePayment() {
   });*/
 
 
-  module.exports = { initializePayment }; // Export the function
+  export { initializePayment }; // Export the function
 
 
 // render cart items
