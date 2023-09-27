@@ -71,6 +71,7 @@ async function initializePayment() {
   const uniqueString = generateUniqueString('meiwuji', 10);
 
   try {
+    const got = await import('got').then((module) => module.default);
     const response = await got.post('/processPayment', {
       headers: {
         'Content-Type': 'application/json',

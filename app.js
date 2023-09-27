@@ -1,11 +1,12 @@
 require("dotenv").config();
 const express = require ('express');
-const got = require('got');
+const got = await import('got');
 process.env.PUBLIC_KEY = 'FLWPUBK_TEST-939acb7e72fe1cc610ea491135e2e4b1-X';
 process.env.SECRET_KEY = 'FLWSECK_TEST-c5d6862c3d99722f93fba9acee6371e1-X';
 process.env.ENCRYPTION_KEY = 'FLWSECK_TESTdae0705e3852';
 
 const app = express();
+const { initializePayment } = require('./path/to/cart.js');
 const port = 3000;
 
 const Flutterwave = require('flutterwave-node-v3');
@@ -51,7 +52,7 @@ app.get("/", (req, res) => {
 app.post('/processPayment', async (req, res) => {
   // Retrieve payment data from the request body
   const paymentData = req.body;
-
+  await initializePayment(paymentData, res);
   const fetch = await import('node-fetch');
 
   // Handle payment processing using got or any other library you prefer
@@ -73,6 +74,7 @@ app.post('/processPayment', async (req, res) => {
     });
 
     const result = await response.json();
+    
 
     // Handle the response here and send it back to the client
     res.json(result);
