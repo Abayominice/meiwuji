@@ -92,13 +92,10 @@ export { initializePayment }; // Export the function
 // render cart items
 function renderCartItems() {
   // Check if cartItemsEl exists
-  if (!cartItemsEl) {
-    console.warn('cartItemsEl is null or undefined');
-  } else {
-    // Proceed with the rest of the code
+  if (cartItemsEl) {
     cartItemsEl.innerHTML = ''; // clear cart element
     cart.forEach((item) => {
-    cartItemsEl.innerHTML += `
+      cartItemsEl.innerHTML +=  `
         <div class="cartopts">
         <div class= "covsect">
             <div class="coviconsresize">
@@ -141,8 +138,11 @@ function renderCartItems() {
       </div>
     </div>
       `;
-  });
-}}
+  }); 
+}else {
+  console.warn('cartItemsEl is null or undefined');
+}
+}
 
 // remove item from cart
 function removeItemFromCart(id) {
