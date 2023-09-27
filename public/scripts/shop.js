@@ -1,5 +1,4 @@
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+/* When the user clicks on the button,toggle between hiding and showing the dropdown content */
 
 function myFunction() { 
     const menu_item = document.querySelector(".menuitems");

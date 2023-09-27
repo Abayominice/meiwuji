@@ -50,7 +50,43 @@ function renderSubtotal() {
   totallPrice = totalPrice.toFixed(2); // Assign the calculated value to totallPrice
 }
 
-export { totallPrice }; // Export totallPrice after it has been assigned a value
+// Define the generateUniqueString function
+function generateUniqueString(prefix = '', length = 10) {
+  const timestamp = new Date().getTime().toString(36);
+  const randomString = Math.random().toString(36).substr(2, length);
+
+  return `${prefix}-${timestamp}-${randomString}`;
+}
+
+// cart.js
+function initializePayment() {
+  // Your existing code for initializing the Flutterwave payment
+  const name = document.getElementById('flname').value;
+  const email = document.getElementById('email').value;
+  const phoneNumber = document.getElementById('phone').value;
+
+  const uniqueString = generateUniqueString('meiwuji', 10);
+
+  FlutterwaveCheckout({
+    public_key: "FLWPUBK_TEST-939acb7e72fe1cc610ea491135e2e4b1-X",
+    tx_ref: uniqueString,
+    amount: totallPrice,
+    currency: "NGN",
+    payment_options: "card, banktransfer, ussd",
+    redirect_url: "https://www.meiwuji.store/download",
+    customer: {
+      email: email,
+      phone_number: phoneNumber,
+      name: name,
+    },
+    customizations: {
+      title: "CONSEQUENCES",
+      logo: "https://drive.google.com/file/d/1824LP_tZrHTjMmcINYJ9gB-F4YAhcTxQ/view?usp=sharing",
+    },
+  });
+}
+
+export { initializePayment }; // Export the function
 
 
 // render cart items
