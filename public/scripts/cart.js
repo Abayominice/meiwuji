@@ -27,9 +27,12 @@ updateCart();
 
 // update cart
 function updateCart() {
-  renderCartItems();
-  renderSubtotal();
-
+  try {
+    renderCartItems();
+    renderSubtotal();
+  } catch (error) {
+    console.error('Error updating cart:', error);
+  }
   // save cart to local storage
   localStorage.setItem("CART", JSON.stringify(cart));
 }
