@@ -91,8 +91,13 @@ export { initializePayment }; // Export the function
 
 // render cart items
 function renderCartItems() {
-  cartItemsEl.innerHTML = ""; // clear cart element
-  cart.forEach((item) => {
+  // Check if cartItemsEl exists
+  if (!cartItemsEl) {
+    console.warn('cartItemsEl is null or undefined');
+  } else {
+    // Proceed with the rest of the code
+    cartItemsEl.innerHTML = ''; // clear cart element
+    cart.forEach((item) => {
     cartItemsEl.innerHTML += `
         <div class="cartopts">
         <div class= "covsect">
@@ -137,7 +142,7 @@ function renderCartItems() {
     </div>
       `;
   });
-}
+}}
 
 // remove item from cart
 function removeItemFromCart(id) {
