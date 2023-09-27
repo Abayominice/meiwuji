@@ -1,9 +1,16 @@
-require("dotenv").config({});
+
 const express = require ('express');
 
 const path = require('path');
-const dotenv = require('dotenv');
-dotenv.config({ path: path.resolve(__dirname, '.env') });
+
+const result = require('dotenv').config({ path: path.resolve(__dirname, '.env') });
+
+if (result.error) {
+  console.error(result.error);
+} else {
+  console.log("dotenv loaded successfully");
+  console.log("PUBLIC_KEY:", process.env.PUBLIC_KEY);
+}
 const app = express();
 const port = 3000;
 
