@@ -62,7 +62,7 @@ function generateUniqueString(prefix = '', length = 10) {
 }
 
 // cart.js
-function initializePayment() {
+async function initializePayment() {
   // Your existing code for initializing the Flutterwave payment
   const name = document.getElementById('flname').value;
   const email = document.getElementById('email').value;
@@ -70,7 +70,35 @@ function initializePayment() {
 
   const uniqueString = generateUniqueString('meiwuji', 10);
 
-  FlutterwaveCheckout({
+  try {
+    const response = await fetch('/processPayment', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        amount: totallPrice, // Replace with the actual payment amount
+        tx_ref: uniqueString,
+        currency: 'NGN', // Replace with the desired currency
+        email: email,
+        phonenumber: phoneNumber,
+        name: name, // Replace with the customer's name
+        // Add other payment data as needed
+      }),
+    });
+
+    const result = await response.json();
+
+    // Handle the response here
+    console.log(result);
+
+    
+  } catch (error) {
+    console.error(error);
+    // Handle network or other errors
+  }
+
+  /*FlutterwaveCheckout({
     public_key: "FLWPUBK_TEST-939acb7e72fe1cc610ea491135e2e4b1-X",
     tx_ref: uniqueString,
     amount: totallPrice,
@@ -86,7 +114,7 @@ function initializePayment() {
       title: "CONSEQUENCES",
       logo: "https://drive.google.com/file/d/1824LP_tZrHTjMmcINYJ9gB-F4YAhcTxQ/view?usp=sharing",
     },
-  });
+  });*/
 }
 
 export { initializePayment }; // Export the function
