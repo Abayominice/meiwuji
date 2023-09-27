@@ -71,7 +71,7 @@ async function initializePayment() {
   const uniqueString = generateUniqueString('meiwuji', 10);
 
   try {
-    const got = await import('got').then((module) => module.default);
+    const got = require('got');
     const response = await got.post('/processPayment', {
       headers: {
         'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ async function initializePayment() {
   });*/
 
 
-export { initializePayment }; // Export the function
+  module.exports = { initializePayment }; // Export the function
 
 
 // render cart items
