@@ -1,4 +1,4 @@
-
+require("dotenv").config();
 const express = require ('express');
 
 const path = require('path');
@@ -9,7 +9,7 @@ if (result.error) {
   console.error(result.error);
 } else {
   console.log("dotenv loaded successfully");
-  console.log("PUBLIC_KEY 1:", process.env.PUBLIC_KEY);
+  console.log("PUBLIC_KEY:", process.env.PUBLIC_KEY);
 }
 const app = express();
 const port = 3000;
