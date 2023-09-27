@@ -175,11 +175,6 @@ function renderCartItems() {
 }
 }
 
-// remove item from cart
-function removeItemFromCart(id) {
-  cart = cart.filter((item) => item.id !== id);
 
-  updateCart();
-}
 
 
