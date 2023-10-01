@@ -41,7 +41,7 @@
         <div class="sgud"></div>
     </header>
     <!-- ends here-->
-    
+     
     <div class="susect">
         <div class="r6c1"></div>
         <div class="msub">
@@ -49,15 +49,15 @@
             <div id="subform">
                 <form  id="emailForm" >
                     <div class="ol"><div class="email" >Full Name</div> &nbsp;<div id="rsik">*</div></div>
-                    <div class="sd ssd"><input required type="text" name="flname" class="email-input" id="email"></div>
+                    <div class="sd ssd"><input required type="text" name="flname" class="name-input" id="email"></div>
                     </br>
                     <div class="ol"><div class="email" >Email</div> &nbsp;<div id="rsik">*</div></div>
                     <div class="sd ssd"><input required type="email" name="email" class="email-input" id="email"></div>
                     </br>
                     <div class="ol"><div class="email" >Phone Number</div> &nbsp;<div id="rsik">*</div></div>
-                    <div class="sd ssd"><input required type="tel" name="phone" class="email-input" id="email"></div>
+                    <div class="sd ssd"><input required type="tel" name="phone" class="phone-input" id="email"></div>
                     </br>
-                    <button id="payButton" style="cursor: pointer;" class="fisignup" type="submit"><h3>Pay Now</h3></button>
+                    <button id="payButton" style="cursor: pointer;" class="email-form-submit fisignup" type="submit">Pay Now</button>
                 </form>
             </div>
         </div>
@@ -107,8 +107,9 @@
     <!--ends here-->
 </main>
    
-
-<script type = "module" src="./scripts/cart.js" ></script> 
+<!-- 
+<script type = "module" src="./scripts/cart.js" ></script>  -->
 <script type="module" src="./scripts/checkout.js" ></script> 
+<script src="https://checkout.flutterwave.com/v3.js"></script>
 </body>
 </html>
